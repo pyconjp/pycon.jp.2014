@@ -1,0 +1,790 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from pycon.jp/2014/schedule/presentation/46/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Sep 2020 01:41:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" />
+        <title>Presentation: Probabilistic Programming with Python | PyCon JP 2014 in TOKYO</title>
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+        
+    <link rel="stylesheet" href="../../../site_media/static/cache/css/a69b123b6daf.css" type="text/css" />
+
+    
+        <link rel="stylesheet" href="../../../site_media/static/cache/css/9d3f1efe04f4.css" type="text/css" media="all" />
+    
+
+    <link rel="stylesheet" href="../../../site_media/static/cache/css/a395e9c9ff38.css" type="text/css" />
+
+    
+
+
+        
+            <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+            <!--[if lt IE 9]>
+                <script src="/2014/site_media/static/pinax/js/html5shiv.js"></script>
+            <![endif]-->
+        
+
+        
+    <meta property="og:image" content="https://us.pycon.org/2014/site_media/static/img/logo.png" />
+    <link href="../../../site_media/static/img/favicon.ico" rel="shortcut icon" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    
+
+<script type="text/javascript" src="../../../site_media/static/cache/js/ea388955cc03.js"></script>
+
+    
+    <script type="text/javascript">
+        $(function () {
+            var converter = new Attacklab.showdown.converter();
+            $('.tutorial-comment').each(function() {
+                $(this).html(converter.makeHtml($(this).html()));
+            })
+            $('.abstract').html(converter.makeHtml($('.abstract').html()));
+
+        });
+    </script>
+
+    <meta name="google-site-verification" content="fG_DG4G4eFtBcgIKht-bJKdirGhDa_51X6yeCS8daDs" />
+
+    </head>
+    <body class="" id="">
+        <div class="">
+
+            
+    
+    <header class="main">
+        <a id="skip" href="#content">Skip to main content</a>
+        <div class="container">
+        <div class="account-bar">
+            
+            
+
+
+
+<div class="account-links row">
+    
+        <a class="login" href="../../../account/login/index.html">Log in</a>
+        <a class="signup" href="../../../account/signup/index.html">Sign up</a>
+    
+</div>
+
+            
+        </div>
+        
+            <nav>
+                <div class="container">
+                    <a class="logo-small" href="../../../index.html">PyCon JP 2014 in Tokyo</a>
+                    <div class="navbar navbar-inverse">
+                        <div class="navbar-inner">
+                            
+                                
+                                
+                                
+
+<ul class="nav">
+    
+        <li class="dropdown ">
+            <a href="../../../about/what-is-pycon/index.html" class="dropdown-toggle" data-toggle="dropdown">
+                About
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="../../../about/what-is-pycon/index.html" >About PyCon JP</a>
+        </li>
+    
+        <li >
+            <a href="../../../about/summary/index.html" >Conference Details</a>
+        </li>
+    
+        <li >
+            <a href="../../../about/code-of-conduct/index.html" >Code of Conduct</a>
+        </li>
+    
+        <li >
+            <a href="../../../about/staff/index.html" >Staff Information</a>
+        </li>
+    
+        <li >
+            <a href="../../../about/staff-list/index.html" >Staff List</a>
+        </li>
+    
+        <li >
+            <a href="../../../sitemap/index.html" >Sitemap</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+        <li class="dropdown ">
+            <a href="../../../speaking/cfp/index.html" class="dropdown-toggle" data-toggle="dropdown">
+                Talks
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="../../../speaking/keynotes/index.html" >Keynote Speakers</a>
+        </li>
+    
+        <li >
+            <a href="../../../speaking/cfp/index.html" >Call For Proposals</a>
+        </li>
+    
+        <li >
+            <a href="../../../tutorials/index.html" >Tutorials</a>
+        </li>
+    
+        <li >
+            <a href="../../../jobfair/index.html" >Job Fair</a>
+        </li>
+    
+        <li >
+            <a href="../../index.html" >Conference Schedule</a>
+        </li>
+    
+        <li >
+            <a href="../../talks/list/index.html" >Talks</a>
+        </li>
+    
+        <li >
+            <a href="../../posters/list/index.html" >Posters</a>
+        </li>
+    
+        <li >
+            <a href="../../../sprint/index.html" >Dev Sprint</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+        <li class="dropdown ">
+            <a href="../../../sponsors/index.html" class="dropdown-toggle" data-toggle="dropdown">
+                Sponsors
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="../../../sponsors/index.html" >PyCon JP Sponsors</a>
+        </li>
+    
+        <li >
+            <a href="../../../sponsors/jobs/index.html" >PyCon JP Jobs Fair</a>
+        </li>
+    
+        <li >
+            <a href="../../../sponsors/prospectus/index.html" >Sponsorship Prospectus</a>
+        </li>
+    
+        <li >
+            <a href="../../../sponsors/apply/index.html" >Sponsorship Application</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+        <li class="dropdown ">
+            <a href="../../../registration/index.html" class="dropdown-toggle" data-toggle="dropdown">
+                Participants
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="../../../participants/index.html" >Participants</a>
+        </li>
+    
+        <li >
+            <a href="../../../registration/index.html" >Registration Information</a>
+        </li>
+    
+        <li >
+            <a href="../../../registration/support/index.html" >Financial Aid</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+        <li class=" ">
+            <a href="../../../venue/index.html" >
+                Venue
+                
+            </a>
+            
+        </li>
+    
+        <li class="dropdown ">
+            <a href="../../../reports/index.html" class="dropdown-toggle" data-toggle="dropdown">
+                Reports
+                <b class="caret"></b>
+            </a>
+            
+                
+<ul class="dropdown-menu">
+    
+        <li >
+            <a href="../../../reports/blogs/index.html" >Blogs</a>
+        </li>
+    
+        <li >
+            <a href="../../../reports/photos/index.html" >Photos</a>
+        </li>
+    
+        <li >
+            <a href="https://www.youtube.com/playlist?list=PLMkWB0UjwFGm4Ao5w2CKv24tl_Op_kxs5" >YouTube Live</a>
+        </li>
+    
+        <li >
+            <a href="http://togetter.com/li/719865" >Togetter</a>
+        </li>
+    
+        <li >
+            <a href="../../../reports/slides/index.html" >Slides</a>
+        </li>
+    
+        <li >
+            <a href="https://docs.google.com/spreadsheet/pub?key=0AjmtypRXAd8zdERDb0FLX2RSdjVTUTVGS2RuY1RsSXc&amp;single=true&amp;gid=1&amp;output=html" >Budget(Google Spreadsheet)</a>
+        </li>
+    
+</ul>
+            
+        </li>
+    
+        <li class=" ">
+            <a href="http://pyconjp.blogspot.com/" >
+                Blog/News (Japanese)
+                
+            </a>
+            
+        </li>
+    
+        <li class=" ">
+            <a href="https://twitter.com/PyConJ" >
+                Twitter
+                
+            </a>
+            
+        </li>
+    
+        <li class=" ">
+            <a href="https://www.facebook.com/PyConJP" >
+                Facebook
+                
+            </a>
+            
+        </li>
+    
+</ul>
+
+                                
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        
+        </div>
+    </header>
+    
+
+
+            
+    <div id="content">
+        
+            <div class="page-head">
+                <div class="container">
+                    <h1></h1>
+                    
+
+<ul class="breadcrumb">
+	
+</ul>
+
+
+                </div>
+            </div>
+            <div class="page-content">
+                
+                <div class="container">
+
+                    <div class="row">
+                        <div class="span9">
+                            
+                            <div class="box">
+                                <div class="box-content">
+    
+    <h2>Probabilistic Programming with Python</h2>
+
+    <h4>
+        
+            <a href="../../../speaker/profile/82/index.html">Erik Sjoberg</a>
+    </h4>
+
+    
+        <dl class="dl-horizontal">
+            <dt>Audience level:</dt>
+            <dd style="margin-bottom: 0;">Intermediate</dd>
+            <dt>Category:</dt>
+            <dd>Libraries and Extensions / ライブラリや拡張</dd>
+        </dl>
+    
+
+    <h3>Description</h3>
+
+    <div class="description">Discussion of the basics and applications of probabilistic programming systems (PPS), as well as the capabilities and limitations of PPS with Python libraries such as PyMC, STAN, and Venture. 
+確率プログラミングの紹介と応用、およびPythonライブラリの現状</div>
+
+    
+    <h3>Abstract</h3>
+
+    <div class="abstract">I will introduce the central concepts and ideas behind probabilistic programming systems (PPS), and introduce several Python packages that can be used to write probabilistic programs. 
+
+PPS seek to create a programming environment that allows non-ML-experts to apply Bayesian statistics to solve complex statistics and machine-learning problems.  By removing the need to write custom inference code, PPS systems have the potential to empower experts and non-experts alike to perform machine learning and statistical modeling with vastly simpler code.  The current state of the art allows for rapid prototyping of complex models on reasonably sized datasets.</div>
+    
+
+    
+    
+</div>
+                            </div>
+                        </div>
+                        <aside class="span3">
+                            
+                            
+                                
+                                
+                                <div class="sponsor-list">
+                                    <h2>SPONSORS</h2>
+                                    
+                                    
+                                        
+                                    
+                                        
+                                            <h3>Platinum</h3>
+                                            
+                                                <a href="http://www.softbank.jp/robot/">
+                                                    <img src="../../../site_media/media/sponsor_files/SBM_AR_Pepper.png.100x60_q85.png" alt="ソフトバンクロボティクス株式会社" />
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                            <h3>Gold</h3>
+                                            
+                                                <a href="http://www.datahotel.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/datahotel_logo_r.png.100x60_q85.png" alt="株式会社データホテル" />
+                                                </a>
+                                            
+                                                <a href="http://corp.gree.net/jp/ja/">
+                                                    <img src="../../../site_media/media/sponsor_files/logo_rgb_v1.1.jpg.100x60_q85.jpg" alt="グリー株式会社" />
+                                                </a>
+                                            
+                                                <a href="http://jp.yamaha.com/products/network/">
+                                                    <img src="../../../site_media/media/sponsor_files/ylm_st_violet_image_1024.bmp.100x60_q85.jpg" alt="ヤマハ株式会社" />
+                                                </a>
+                                            
+                                                <a href="http://www.microsoft.com/ja-jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/MSFT_logo_rgb_C-Gray_D.png.100x60_q85.png" alt="日本マイクロソフト株式会社" />
+                                                </a>
+                                            
+                                                <a href="http://gu3.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/logo.jpg.100x60_q85.jpg" alt="株式会社 gumi" />
+                                                </a>
+                                            
+                                                <a href="https://www.python.org/psf/">
+                                                    <img src="../../../site_media/media/sponsor_files/PSF-Logo.png.100x60_q85.png" alt="Python Software Foundation" />
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                            <h3>Silver</h3>
+                                            
+                                                <a href="http://www.beproud.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/beproud_logo_py_1.png.100x60_q85.png" alt="株式会社ビープラウド" />
+                                                </a>
+                                            
+                                                <a href="http://zero-start.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/%e3%82%bc%e3%83%ad%e3%82%b9%e3%82%bf%e3%83%bc%e3%83%88_logo.png.100x60_q85.jpg" alt="株式会社ゼロスタート" />
+                                                </a>
+                                            
+                                                <a href="http://www.makeleaps.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/MakeLeaps_Logotext_Web.png.100x60_q85.png" alt="MakeLeaps" />
+                                                </a>
+                                            
+                                                <a href="http://www.vettl.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/vettl-logo3.png.100x60_q85.jpg" alt="株式会社ヴェッテル" />
+                                                </a>
+                                            
+                                                <a href="http://www.mysql.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/mysql.png.100x60_q85.jpg" alt="Oracle" />
+                                                </a>
+                                            
+                                                <a href="http://triax.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/pycon_2014_triax_logo.png.100x60_q85.jpg" alt="TriAx" />
+                                                </a>
+                                            
+                                                <a href="http://www.silveregg.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/silveregg_logo.png.100x60_q85.png" alt="シルバーエッグ・テクノロジー株式会社" />
+                                                </a>
+                                            
+                                                <a href="http://www.gandi.net/">
+                                                    <img src="../../../site_media/media/sponsor_files/logo_gandi_black.png.100x60_q85.png" alt="Gandi Asia Co. Ltd" />
+                                                </a>
+                                            
+                                                <a href="http://cioplus.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/CIOPLOGO_2.png.100x60_q85.png" alt="株式会社シーアイオープラス" />
+                                                </a>
+                                            
+                                                <a href="http://shiroyagi.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/logo_with_company_name_1.png.100x60_q85.png" alt="Shiroyagi Corporation" />
+                                                </a>
+                                            
+                                                <a href="http://voyagegroup.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/voyage.png.100x60_q85.jpg" alt="株式会社VOYAGE GROUP" />
+                                                </a>
+                                            
+                                                <a href="http://www.cb21.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/Catchball21_logo_150px.png.100x60_q85.jpg" alt="株式会社キャッチボール・トゥエンティワン" />
+                                                </a>
+                                            
+                                                <a href="http://iridge.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/iridgeLogo.png.100x60_q85.jpg" alt="iRidge, Inc. (株式会社アイリッジ)" />
+                                                </a>
+                                            
+                                                <a href="http://www.sakura.ad.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/sakura_logo.jpg.100x60_q85.jpg" alt="さくらインターネット株式会社" />
+                                                </a>
+                                            
+                                                <a href="https://codeiq.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/CodeIQ_Logo.png.100x60_q85.png" alt="CodeIQ" />
+                                                </a>
+                                            
+                                                <a href="http://www.goga.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/%e3%82%b4%e3%83%bc%e3%82%ac%e3%83%ad%e3%82%b4%e6%a8%aaURL%e4%bb%98.png.100x60_q85.png" alt="株式会社ゴーガ" />
+                                                </a>
+                                            
+                                                <a href="http://heartbeats.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/hb_logo_rectangle.png.100x60_q85.png" alt="株式会社ハートビーツ" />
+                                                </a>
+                                            
+                                                <a href="http://www.mobilefactory.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/MF_cl300.jpg.100x60_q85.jpg" alt="株式会社モバイルファクトリー" />
+                                                </a>
+                                            
+                                                <a href="http://realglobe.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/rg-logo.png.100x60_q85.png" alt="株式会社リアルグローブ" />
+                                                </a>
+                                            
+                                                <a href="http://www.nexedi.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/logo_nexedi.png.100x60_q85.png" alt="株式会社Nexedi" />
+                                                </a>
+                                            
+                                                <a href="http://userdive.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/logo_2.png.100x60_q85.png" alt="株式会社 UNCOVER TRUTH" />
+                                                </a>
+                                            
+                                                <a href="http://www.castalia.co.jp/en/">
+                                                    <img src="../../../site_media/media/sponsor_files/castalia_logo.png.100x60_q85.png" alt="キャスタリア株式会社" />
+                                                </a>
+                                            
+                                                <a href="http://tracpath.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/tracpath-logo-w.png.100x60_q85.jpg" alt="tracpath" />
+                                                </a>
+                                            
+                                                <a href="http://www.d-itlab.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/IT_LAB_logo_20111221.png.100x60_q85.jpg" alt="株式会社デンソーアイティーラボラトリ" />
+                                                </a>
+                                            
+                                                <a href="http://www.conoha.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/Conohalogo_2.jpg.100x60_q85.jpg" alt="ConoHa byGMO" />
+                                                </a>
+                                            
+                                                <a href="http://www.jig-saw.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/jigsaw.png.100x60_q85.png" alt="ジグソー株式会社" />
+                                                </a>
+                                            
+                                                <a href="http://www.jetbrains.com/pycharm/">
+                                                    <img src="../../../site_media/media/sponsor_files/PyCharm_byJB.png.100x60_q85.png" alt="JetBrains" />
+                                                </a>
+                                            
+                                                <a href="http://www.iij.ad.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/IIJ_logo_%e3%82%bf%e3%83%86color.gif.100x60_q85.png" alt="株式会社インターネットイニシアティブ" />
+                                                </a>
+                                            
+                                                <a href="http://www.mfeed.ad.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/logo.gif.100x60_q85.png" alt="インターネットマルチフィード株式会社" />
+                                                </a>
+                                            
+                                                <a href="https://thebase.in/">
+                                                    <img src="../../../site_media/media/sponsor_files/biglogo_2.png.100x60_q85.png" alt="BASE株式会社" />
+                                                </a>
+                                            
+                                                <a href="http://ustream.siteplus.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/hd_logo.png.100x60_q85.png" alt="ストリームプラス" />
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                            <h3>Patron</h3>
+                                            
+                                                <a href="http://librabuch.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/Ikeuchi_profile.png.100x60_q85.jpg" alt="Takahiro Ikeuchi" />
+                                                </a>
+                                            
+                                                <a href="http://twitter.com/yamakatu">
+                                                    <img src="../../../site_media/media/sponsor_files/yamakatu2_1.jpg.100x60_q85.jpg" alt="やまかつ" />
+                                                </a>
+                                            
+                                                <a href="https://www.facebook.com/abenbenbenben">
+                                                    <img src="../../../site_media/media/sponsor_files/abenben.jpg.100x60_q85.jpg" alt="あべんべん" />
+                                                </a>
+                                            
+                                                <a href="http://www.edechs.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/edechs_logo_wp_title.png.100x60_q85.png" alt="edechs" />
+                                                </a>
+                                            
+                                                <a href="http://kabepy.connpass.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/kabepy_sticker.png.100x60_q85.png" alt="Pythonボルダリング部" />
+                                                </a>
+                                            
+                                                <a href="http://hirokiky.org/">
+                                                    <img src="../../../site_media/media/sponsor_files/4c69dbc6443b1723faa7a96f9a8b4c9a.jpeg.100x60_q85.jpg" alt="Hiroki KIYOHARA" />
+                                                </a>
+                                            
+                                                <a href="http://nakagami.blog.so-net.ne.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/456db85aab875afd0378a91efdbff91f.jpeg.100x60_q85.jpg" alt="Hajime Nakagami" />
+                                                </a>
+                                            
+                                                <a href="http://rokujyouhitoma.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/371159_1681898543_8915904_n.jpeg.100x60_q85.jpg" alt="rokujyouhitoma" />
+                                                </a>
+                                            
+                                                <a href="http://www.platinum-egg.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/index_head_logo1.gif.100x60_q85.jpg" alt="Platinum Egg Inc." />
+                                                </a>
+                                            
+                                                <a href="http://masahito.me/">
+                                                    <img src="../../../site_media/media/sponsor_files/1780778_822884794393138_49239353_n.jpg.100x60_q85.jpg" alt="MASATO NAKAMURA" />
+                                                </a>
+                                            
+                                                <a href="http://spika.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/%e3%82%b9%e3%83%94%e3%82%ab%e3%83%ad%e3%82%b4_%e6%ad%a3%e6%96%b9%e5%bd%a2.png.100x60_q85.png" alt="株式会社スピカ" />
+                                                </a>
+                                            
+                                                <a href="http://innova-jp.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/inova-large.png.100x60_q85.jpg" alt="株式会社イノーバ" />
+                                                </a>
+                                            
+                                                <a href="http://argmax.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/308263_216606798394580_3856608_n.jpg.100x60_q85.jpg" alt="Shunsuke Aihara" />
+                                                </a>
+                                            
+                                                <a href="https://twitter.com/gjo">
+                                                    <img src="../../../site_media/media/sponsor_files/face.jpg.100x60_q85.jpg" alt="gjo" />
+                                                </a>
+                                            
+                                                <a href="http://www.silveregg.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/me.jpg.100x60_q85.jpg" alt="Tom Foley" />
+                                                </a>
+                                            
+                                                <a href="http://yarch.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/yarch_bgw.png.100x60_q85.jpg" alt="yarch" />
+                                                </a>
+                                            
+                                                <a href="http://pelican.aodag.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/r-penta128.png.100x60_q85.png" alt="aodag" />
+                                                </a>
+                                            
+                                                <a href="https://twitter.com/dod2119">
+                                                    <img src="../../../site_media/media/sponsor_files/3a24971b4cdc04696f512275dc937de1.jpeg.100x60_q85.jpg" alt="opapy" />
+                                                </a>
+                                            
+                                                <a href="http://tell-k.hatenablog.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/tell-k.PNG.100x60_q85.jpg" alt="tell-k" />
+                                                </a>
+                                            
+                                                <a href="http://shacho.beproud.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/twitter_icon_400x400.png.100x60_q85.jpg" alt="佐藤治夫" />
+                                                </a>
+                                            
+                                                <a href="http://about.me/tomohiro.nakamura">
+                                                    <img src="../../../site_media/media/sponsor_files/1a84ce11763f47f549ba51c9bb000ef5.png.100x60_q85.jpg" alt="Tomohiro NAKAMURA" />
+                                                </a>
+                                            
+                                                <a href="http://yasunori.gotoh.me/">
+                                                    <img src="../../../site_media/media/sponsor_files/my.jpg.100x60_q85.jpg" alt="yasunori" />
+                                                </a>
+                                            
+                                                <a href="http://www.begi.net/">
+                                                    <img src="../../../site_media/media/sponsor_files/beginet_logo.png.100x60_q85.png" alt="株式会社びぎねっと" />
+                                                </a>
+                                            
+                                                <a href="http://xn--5rt123a3lb.jp/">
+                                                    <img src="#" alt="清水川知恵子" />
+                                                </a>
+                                            
+                                                <a href="https://twitter.com/shidocchi">
+                                                    <img src="../../../site_media/media/sponsor_files/shidocchi22.jpg.100x60_q85.jpg" alt="shidocchi" />
+                                                </a>
+                                            
+                                                <a href="http://showyou.hatenablog.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/profile.gif.100x60_q85.png" alt="showyou" />
+                                                </a>
+                                            
+                                                <a href="http://artifactnoise.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/14554_616791718398132_740708869_n.jpg.100x60_q85.jpg" alt="北神 雄太(ArtifactNoise  .LLP)" />
+                                                </a>
+                                            
+                                                <a href="http://www.gembook.org/">
+                                                    <img src="../../../site_media/media/sponsor_files/dog_400x400.jpg.100x60_q85.jpg" alt="石本 敦夫" />
+                                                </a>
+                                            
+                                                <a href="http://about.me/ikeikeikeike">
+                                                    <img src="../../../site_media/media/sponsor_files/217484.png.100x60_q85.jpg" alt="ikeikeikeike" />
+                                                </a>
+                                            
+                                                <a href="http://corp.intimatemerger.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/intimate_merger_large.jpg.100x60_q85.jpg" alt="株式会社インティメートマージャー" />
+                                                </a>
+                                            
+                                                <a href="http://about.me/zenichiro">
+                                                    <img src="../../../site_media/media/sponsor_files/me110716.png.100x60_q85.png" alt="Zenichiro Yasuda" />
+                                                </a>
+                                            
+                                                <a href="http://www.hexacosa.net/about/">
+                                                    <img src="../../../site_media/media/sponsor_files/hhatto.jpg.100x60_q85.jpg" alt="Hideo Hattori" />
+                                                </a>
+                                            
+                                                <a href="http://yotchang4s.org/">
+                                                    <img src="../../../site_media/media/sponsor_files/kabepy_1.jpg.100x60_q85.jpg" alt="yotchang4s" />
+                                                </a>
+                                            
+                                                <a href="http://www.bakfoo.com/">
+                                                    <img src="../../../site_media/media/sponsor_files/bakfoologo2.png.100x60_q85.png" alt="バクフー株式会社" />
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                            <h3>Media</h3>
+                                            
+                                                <a href="http://gihyo.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/logo_gihyo.png.100x60_q85.jpg" alt="gihyo.jp" />
+                                                </a>
+                                            
+                                                <a href="http://engineer.typemag.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/Etype_logo.jpg.100x60_q85.jpg" alt="エンジニアtype" />
+                                                </a>
+                                            
+                                                <a href="http://codezine.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/logo_codezine.png.100x60_q85.jpg" alt="CodeZine" />
+                                                </a>
+                                            
+                                                <a href="http://www.oreilly.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/orj-logo-2014.png.100x60_q85.jpg" alt="オライリー・ジャパン" />
+                                                </a>
+                                            
+                                                <a href="http://www.atmarkit.co.jp/">
+                                                    <img src="../../../site_media/media/sponsor_files/logo_at_it.png.100x60_q85.png" alt="@IT" />
+                                                </a>
+                                            
+                                                <a href="http://doda.jp/engineer/">
+                                                    <img src="../../../site_media/media/sponsor_files/DODA%e3%83%ad%e3%82%b4.jpg.100x60_q85.jpg" alt="DODA" />
+                                                </a>
+                                            
+                                        
+                                    
+                                </div>
+                                
+                            
+                            
+                        </aside>
+                    </div>
+                </div>
+                
+            </div>
+        
+    </div>
+
+    <footer>
+        
+
+        <div class="container">
+        
+            <a href="../../../index.html" class="logo">
+                <img src="../../../site_media/static/img/pycon2014-logo-footer%402x.png" alt="PyCon JP 2014 in Tokyo">
+            </a>
+            <div class="footer-content">
+                <p class="sns">
+                    <a href="https://www.facebook.com/PyConJP"><img src="../../../site_media/static/img/icon-facebook.png"></a>
+                    <a href="https://twitter.com/pyconj"><img src="../../../site_media/static/img/icon-twitter.png"></a>
+                </p>
+                <p>
+                  
+                    PyCon JP 2014 in Tokyo is a production of the <a href="http://www.pycon.jp/">PyCon JP Management Team</a>.
+                  
+                </p>
+                <p>
+                  
+                    Site forked from the <a href="http://us.pycon.jp/2014">PyCon 2014</a> site built by <a href="http://caktusgroup.com/">Caktus Consulting Group, LLC.</a> using <a href="http://eldarion.com/symposion/" title="Symposion — An Open Platform for Conference Websites">Symposion</a>.
+                  
+                </p>
+                <p>
+                  
+                    Questions? Comments? Contact <a href="mailto:2014@pycon.jp">2014@pycon.jp</a>
+                  
+                </p>
+            </div>
+        
+        </div>
+    </footer>
+
+        </div>
+
+        
+    <script src="../../../site_media/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../site_media/static/pinax/js/theme.js"></script>
+    
+
+
+        
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-46515478-6', 'pycon.jp');
+    ga('send', 'pageview');
+  </script>
+  
+  
+
+    </body>
+
+<!-- Mirrored from pycon.jp/2014/schedule/presentation/46/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Sep 2020 01:41:27 GMT -->
+</html>
